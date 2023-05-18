@@ -5,7 +5,7 @@ import preprocess from 'svelte-preprocess';
 const config = {
 	preprocess: preprocess({
 		scss: {
-			prependData: '@use "../styles/functions";@use "@unsass/breakpoint";'
+			prependData: '@use "src/styles/functions";@use "@unsass/breakpoint";'
 		}
 	}),
 
@@ -13,7 +13,7 @@ const config = {
 		adapter: adapter(),
 		alias: {
 			$components: 'src/lib/components',
-			$types: 'src/routes/$types' // Add the path alias for $types
+			$types: 'src/routes/$types'
 		}
 	}
 };
