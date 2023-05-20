@@ -5,14 +5,18 @@
 <script lang="ts">
 	import { Pause, Play } from 'lucide-svelte';
 	import { createEventDispatcher } from 'svelte';
+
 	type Track = SpotifyApi.TrackObjectFull | SpotifyApi.TrackObjectSimplified;
 	export let track: Track;
+
 	const dispatch = createEventDispatcher<{
 		play: { track: Track };
 		pause: { track: Track };
 	}>();
+
 	let audio: HTMLAudioElement;
 	let paused = true;
+
 	function onPlay() {
 		if (current && current !== audio) {
 			current.currentTime = 0;
@@ -58,6 +62,10 @@
 	.player {
 		audio {
 			display: none;
+			:global(html.no-js) & {
+				display: block;
+				width: 100%;
+			}
 		}
 		button {
 			width: 12px;
@@ -70,6 +78,9 @@
 				fill: var(--text-color);
 				width: 12px;
 				height: 12px;
+			}
+			:global(html.no-js) & {
+				display: none;
 			}
 		}
 	}
