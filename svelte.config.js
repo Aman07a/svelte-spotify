@@ -13,10 +13,11 @@ const config = {
 		adapter: adapter(),
 		alias: {
 			$components: 'src/lib/components',
+			$types: 'src/routes/$types',
 			$assets: 'src/assets',
 			$actions: 'src/lib/actions',
 			$helpers: 'src/lib/helpers',
-			$types: 'src/routes/$types'
+			$stores: 'src/lib/stores'
 		}
 	}
 };
