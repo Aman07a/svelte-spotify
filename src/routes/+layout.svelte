@@ -2,8 +2,8 @@
 	import { Navigation, Header } from '$components';
 	import { page } from '$app/stores';
 	import NProgress from 'nprogress';
-	import 'nprogress/nprogress.css';
 	import { hideAll } from 'tippy.js';
+	import 'nprogress/nprogress.css';
 	import 'modern-normalize/modern-normalize.css';
 	import '../styles/main.scss';
 	import type { LayoutData } from './$types';
@@ -36,11 +36,11 @@
 <svelte:window bind:scrollY />
 
 <svelte:head>
-	<title>Spotify{$page.data.title ? ` - ${$page.data.title} ` : ''}</title>
+	<title>Spotify{$page.data.title ? ` - ${$page.data.title}` : ''}</title>
 </svelte:head>
 
 {#if user}
-	<a href="#main-content" class="skip link">Skip to Content</a>
+	<a href="#main-content" class="skip-link">Skip to Content</a>
 {/if}
 
 <div id="main">
