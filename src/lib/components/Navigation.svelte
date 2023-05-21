@@ -183,7 +183,7 @@
 			// padding: 20px;
 			min-width: var(--sidebar-width);
 			// fixing max-width
-			max-width: 350px;
+			max-width: 200px;
 			background-color: var(--sidebar-color);
 			height: 100vh;
 			// overflow: auto;
