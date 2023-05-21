@@ -182,6 +182,8 @@
 		.nav-content-inner {
 			// padding: 20px;
 			min-width: var(--sidebar-width);
+			// fixing max-width
+			max-width: 350px;
 			background-color: var(--sidebar-color);
 			height: 100vh;
 			// overflow: auto;
