@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { X } from 'lucide-svelte';
+
 	export let id: string;
 	export let title: string;
 </script>

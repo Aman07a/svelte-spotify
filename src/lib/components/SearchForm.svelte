@@ -2,8 +2,11 @@
 	import { afterNavigate } from '$app/navigation';
 	import { page } from '$app/stores';
 	import { Search } from 'lucide-svelte';
+
 	let searchInput: HTMLInputElement;
+
 	$: searchQuery = $page.params.query || '';
+
 	afterNavigate(() => {
 		searchInput.focus();
 	});
